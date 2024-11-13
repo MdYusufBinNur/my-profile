@@ -33,16 +33,16 @@
 
 
           <div class="d-flex flex-column justify-content-between service-contact-card-footer">
-            <h3 class="text-xl fw-bold font-Syne text-white">Looking for a hectic designer?</h3>
+            <h3 class="text-xl fw-bold font-Syne text-white">Looking for a Full Stack Developer?</h3>
             <div class="d-flex justify-content-between align-items-center">
-              <p class="text-2xl fw-bold font-Syne leading-none text-warning">mdyusufbinnur@gmail.com</p>
+              <p class="text-md fw-bold font-Syne leading-none text-warning">mdyusufbinnur@gmail.com</p>
             </div>
           </div>
 
           <div class="d-flex flex-column justify-content-between service-contact-card-footer">
             <h3 class="text-xl fw-bold font-Syne text-white">Want a more in-depth look at my history?</h3>
             <div class="d-flex justify-content-between align-items-center">
-              <p class="text-2xl fw-bold font-Syne leading-none text-warning">+880 1815 625 375</p>
+              <p class="text-md fw-bold font-Syne leading-none text-warning">+880 1815 625 375</p>
             </div>
           </div>
 
@@ -52,27 +52,10 @@
         <div class="pt-6 copyright">
           <div class="row">
 
-            <div class="col-12 col-sm-8 order-last order-sm-first">
-              <p class="text-white text-lg fw-normal font-sans leading-7">©2024 Md Yusuf Bin Nur, All
+            <div class="col-12 order-last order-sm-first" align="center">
+              <p class="text-white text-lg fw-normal font-sans leading-7">©{{ currentYear}} Md Yusuf Bin Nur, All
                 Rights Reserved
               </p>
-            </div>
-            <div class="col-12 col-sm-4 order-first order-sm-last">
-              <div class="d-flex justify-content-end mb-2 mb-sm-0">
-                <a id="scrollUp" class="d-flex flex-wrap align-items-center gap-2" href="#"
-                   aria-label="scroll up">
-                                        <span class="text-white text-lg fw-normal font-sans leading-7 transition-all">
-                            Back to Top</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 19V5" stroke="#FFB646" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                    <path d="M19 12L12 5L5 12" stroke="#FFB646" stroke-width="2"
-                          stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -84,10 +67,9 @@
 
 </template>
 
-<script>
-export default {
-  name: "Footer"
-}
+<script setup>
+const currentYear = ref(new Date().getFullYear());
+
 </script>
 
 <style scoped>

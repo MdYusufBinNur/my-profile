@@ -31,7 +31,7 @@
             <div class="d-flex flex-wrap hero-btn-wraper">
               <!-- Link Start -->
               <span data-aos="fade-right" data-aos-delay="1000">
-              <a href="#" class="d-flex align-items-center flex-wrap btn-primary">Let’s
+              <a @click.prevent="goto('contact')" class="d-flex align-items-center flex-wrap btn-primary">Let’s
                 Talk
                 <span class="animate-arrow-up">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@
 
               <!-- Link Start -->
               <span data-aos="fade-right" data-aos-delay="1200">
-              <a href="#" class="d-flex align-items-center flex-wrap btn-primary-outline">
+              <a @click.prevent="goto('projects')" class="d-flex align-items-center flex-wrap btn-primary-outline">
                 My Work
                 <span class="animate-arrow-up">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +106,7 @@
       <img class="position-absolute top-0 end-0 hero-image" data-aos="fade-left" src="/images/hero/hero.png"
            alt="hero Image">
 
-      <a href="#" class="contact-spin">
+      <a @click.prevent="goto('contact')" class="contact-spin">
         <svg class="position-absolute" width="180" height="180" viewBox="0 0 180 180" fill="none"
              xmlns="http://www.w3.org/2000/svg">
           <g class="animate-spin">
@@ -543,11 +543,6 @@
                 <span class="text-dark text-32 fw-bold font-Syne position-relative">50+</span>
                 <p class="paragraph">Worldwide client</p>
               </li>
-              <!--                            <li class="award-lists-item">-->
-
-              <!--                                <span class="text-dark text-32 fw-bold font-Syne position-relative">3.5k</span>-->
-              <!--                                <p class="paragraph">Job done successfully</p>-->
-              <!--                            </li>-->
             </ul>
 
             <div class="d-flex flex-wrap">
@@ -662,47 +657,47 @@
                   in and making them want more.</p>
 
                 <ul class="flex-column gap-3 d-inline-flex list-unstyled p-0">
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Name</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
+                    <span class="text-dark gap-5 font-Syne leading-8">
                                         Md Yusuf Bin Nur</span>
                   </li>
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Nationality</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
+                    <span class="text-dark   font-Syne leading-8">
                                         Bangladeshi</span>
                   </li>
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Phone</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
+                    <span class="text-dark   font-Syne leading-8">
                                         +880 1815 625 375</span>
                   </li>
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Email</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
+                    <span class="text-dark   font-Syne leading-8">
                                         mdyusufbinnur@gmail.com</span>
                   </li>
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Experience</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
+                    <span class="text-dark   font-Syne leading-8">
                                         5+ years</span>
                   </li>
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Freelance</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
+                    <span class="text-dark   font-Syne leading-8">
                                         Available</span>
                   </li>
-                  <li class="gap-10 d-inline-flex align-items-center">
+                  <li class="gap-5 d-inline-flex align-items-center">
                                             <span class="w-110px text-black-text-800 text-lg fw-normal leading-none">
                                         Language</span>
-                    <span class="text-dark text-2xl fw-bold font-Syne leading-8">
-                                            English, Bengali, Hindee</span>
+                    <span class="text-dark   font-Syne leading-8">
+                                            English, Bengali, Hindi</span>
                   </li>
                 </ul>
 
@@ -889,13 +884,13 @@
           <div class="d-flex flex-wrap flex-column gap-3">
             <div class="d-flex flex-wrap gap-2">
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">WEB</a>
+                 >WEB</a>
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">DEVELOPMENT</a>
+                 >DEVELOPMENT</a>
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">NEXT JS</a>
+                 >NEXT JS</a>
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">NODE JS</a>
+                 >NODE JS</a>
 
             </div>
             <div class="d-flex flex-wrap align-items-center justify-content-between text-dark portfolio-title">
@@ -913,13 +908,13 @@
           <div class="d-flex flex-wrap flex-column gap-3">
             <div class="d-flex flex-wrap gap-2">
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">WEB</a>
+                 >WEB</a>
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">DevOps</a>
+                 >DevOps</a>
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">NUXT JS</a>
+                 >NUXT JS</a>
               <a class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                 href="#">LARAVEL</a>
+                 >LARAVEL</a>
 
             </div>
             <div class="d-flex flex-wrap align-items-center justify-content-between text-dark portfolio-title">
@@ -1008,7 +1003,7 @@
                 week</p>
             </div>
 
-            <a href="#" class="animate-arrow-up">
+            <a @click.prevent="goto('projects')" class="animate-arrow-up">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path class="transition-all" d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.6"

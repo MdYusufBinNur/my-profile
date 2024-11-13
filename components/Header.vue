@@ -69,7 +69,7 @@
             </a>
           </li>
           <li class="offcanvas-menu-item">
-            <a href=""
+            <a @click.prevent="goto('projects')"
                class="text-white text-xl fw-bold font-Syne leading-none d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">Project
               <span class="d-inline-block animate-arrow-up">
 
@@ -78,7 +78,7 @@
           </li>
 
           <li class="offcanvas-menu-item">
-            <a href="/"
+            <a @click.prevent="goto('contact')"
                class="text-white text-xl fw-bold font-Syne leading-none d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">Contact
               <span class="d-inline-block animate-arrow-up">
 
@@ -153,9 +153,23 @@ export default {
       });
     }
   },
+  data() {
+    return {
+      offcanvasRef: null
+    }
+  },
   methods: {
     gotoHome() {
       navigateTo('/')
+    },
+    goto(path) {
+      navigateTo('/' + path)
+    },
+    closeCanvas() {
+      if (offcanvasRef) {
+        const offcanvas = new bootstrap.Offcanvas(offcanvasRef.value);
+        offcanvas.hide();
+      }
     }
   }
 };
