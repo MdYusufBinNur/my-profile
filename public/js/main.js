@@ -3,7 +3,7 @@
 
   var $window = $(window);
   /*----------------------------------
-# header sticky 
+# header sticky
 -----------------------------------*/
   $.fn.elExists = function () {
     return this.length > 0;
@@ -147,9 +147,9 @@
 
 
   /*
-  
-  * Ajax Contact Form 
-  
+
+  * Ajax Contact Form
+
   */
   // Get the form.
   const form = $('#contact-form');
@@ -192,8 +192,6 @@
       })
 
       .fail(function (data) {
-
-        console.log(data);
 
         // Make sure that the formMessages div has the 'error' class.
         $(formMessages).removeClass('success');

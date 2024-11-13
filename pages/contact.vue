@@ -86,17 +86,19 @@
 
 
             <div class="col-12">
-              <button class="d-flex align-items-center flex-wrap btn-primary" type="submit">
-                <span v-if="isSubmitting" class="loader"></span>
-                <span v-else class="d-inline-block ml-3 animate-arrow-up">Submit
-
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="d-flex align-items-center flex-wrap btn-primary" id="liveToastBtn" type="submit">
+                <div v-if="isSubmitting" class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <span v-else class="d-inline-block ml-3 animate-arrow-up">
+                  Submit
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round"></path>
           <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round"></path>
         </svg>
-      </span>
+                </span>
               </button>
               <p class="form-message mt-3"></p>
             </div>
@@ -136,13 +138,15 @@
         </div>
       </div>
     </div>
+    <div class="toast align-items-center bg-primary position-fixed bottom-0 end-0 p-3" style="z-index: 11" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          {{ popupText }}
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
   </section>
-  <div v-if="showPopup" class="popup">
-    <p class="text-center text-xl">
-      {{ popupText.value }}
-    </p>
-    <button class="d-flex align-items-center flex-wrap btn-primary" @click.prevent="closePopup">Close</button>
-  </div>
 </template>
 
 <script setup>
@@ -153,14 +157,14 @@ const email = ref('');
 const phone = ref('');
 const subject = ref('');
 const message = ref('');
-const popupText = ref('');
+const popupText = ref('Mail has been sent!');
 const isSubmitting = ref(false);
-const showPopup = ref(false);
 
-const closePopup = () => {
-  showPopup.value = false
-}
-
+const showToast = () => {
+  const toastEl = document.getElementById('liveToast');
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
+};
 const handleSubmit = async () => {
   isSubmitting.value = true
   const response = await fetch('/api/contact', {
@@ -181,15 +185,13 @@ const handleSubmit = async () => {
 
   if (result.status === 'success') {
     popupText.value = 'Your message has been sent!'
-    showPopup.value = true
   } else {
     popupText.value = 'Something went wrong!!!'
-    showPopup.value = true
   }
-
   isSubmitting.value = false
-
+  showToast()
 };
+
 </script>
 
 

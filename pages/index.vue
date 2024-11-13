@@ -65,7 +65,7 @@
             <div class="d-flex flex-wrap align-items-center" data-aos="fade-right" data-aos-delay="1400">
               <div class="d-flex flex-wrap align-items-center">
                                     <span class="font-Syne text-dark fw-bold text-counter lh-1">
-                <span class="counter">50</span>+</span>
+                <span>50</span>+</span>
 
                 <span class="text-worldwide text-lg">Worldwide client</span>
                 <span class="mx-8">
