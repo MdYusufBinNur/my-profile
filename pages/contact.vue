@@ -84,7 +84,6 @@
                         id="Message" cols="30" rows="10" placeholder="Type your message" required></textarea>
             </div>
 
-
             <div class="col-12">
               <button class="d-flex align-items-center flex-wrap btn-primary" id="liveToastBtn" type="submit">
                 <div v-if="isSubmitting" class="spinner-border" role="status">
