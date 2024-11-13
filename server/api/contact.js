@@ -11,8 +11,8 @@ export default defineEventHandler(async (event) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'binnurtikweb@gmail.com', // Your Gmail email
-            pass: 'cpenlczjjoitttxm',  // Your Gmail App Password (not the actual Gmail password)
+            user: process.env.MAIL,
+            pass: process.env.SECRET,
         },
     });
 
